@@ -1,0 +1,231 @@
+body {
+	width: 750px;
+	margin: 0 auto;
+	background-image: url(../b072.jpg);
+}
+
+.text-center{
+	text-align: center;
+}
+
+.img-center{
+	display: -webkit-flex;
+ 	display: flex;
+	-webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+ 	justify-content: center; /* 横方向中央揃え */
+}
+
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.aicon{
+	display: -webkit-flex;
+ 	display: flex;
+ 	-webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+ 	align-items: center; /* 縦方向中央揃え */
+ 	-webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+ 	justify-content: center; /* 横方向中央揃え */
+	float: left;
+  width: 10%;
+  height: 50px;
+  <!-- background: lightgreen;
+}
+
+.title {
+	display: -webkit-flex;
+ 	display: flex;
+ 	-webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+ 	align-items: center; /* 縦方向中央揃え */
+ 	-webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+ 	justify-content: center; /* 横方向中央揃え */
+	float: right;
+	font-size: 30px;
+	font-family: monospace;
+	width: 90%;
+	height: 50px;
+
+}
+
+.header {
+	margin: auto;
+	width: 100%;
+	height: 45px;
+	background: #f0e9a8;
+}
+
+.navi{
+  display: block;
+}
+
+.ul{
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.hmenu{
+  margin: 0px;
+  padding: 0px 0px 0px 15px;
+  background-color: #cc0000;
+}
+
+.content {
+	float: left;
+	width: 70%;
+	height: 480px;
+	background: #f0edd8;
+}
+
+.side {
+	display: -webkit-flex;
+ 	display: flex;
+ 	-webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+ 	justify-content: center; /* 横方向中央揃え */
+
+	float: right;
+	width: 30%;
+	height: 480px;
+	background: white;
+}
+
+.footer {
+	width: 100%;
+	height: 30px;
+	background: #f0e68c;
+}
+
+.copyright{
+	font-size: 20px;
+	text-align: right;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.section{
+	display: block;
+}
+
+/* -------------------- */
+/* 昨年度課題からの再利用(所々追加や変更有) */
+/* -------------------- */
+.menu {
+	width: 750px;
+	height: 50px;
+}
+
+/* -------------------- */
+/* ▼メニューバーの装飾 */
+/* -------------------- */
+ul.ddmenu {
+   margin: 0px;               /* メニューバー外側の余白(ゼロ) */
+   padding: 0px 0px 0px 15px; /* メニューバー内側の余白(左に15px) */
+   background-color: #f0e9a8; /* バーの背景色 */
+}
+
+/* -------------------------- */
+/* ▼メインメニュー項目の装飾 */
+/* -------------------------- */
+ul.ddmenu li {
+	width: 170px;           /* メニュー項目の横幅(170px) */
+	display: inline-block;  /* ★1:横並びに配置する */
+  list-style-type: none;  /* ★2:リストの先頭記号を消す */
+  position: relative;     /* ★3:サブメニュー表示の基準位置にする */
+}
+ul.ddmenu a {
+  background-color: #f0e9a8; /* メニュー項目の背景色 */
+	color: #4d4936;						 /* 文字の色 */
+	line-height: 40px;         /* メニュー項目のリンクの高さ(40px) */
+  text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
+  text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
+  font-weight: bold;         /* 太字にする */
+	display: -webkit-flex;
+ 	display: flex;
+ 	-webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+ 	align-items: center; /* 縦方向中央揃え */
+ 	-webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+ 	justify-content: center; /* 横方向中央揃え */
+}
+ul.ddmenu a:hover {
+  background-color: #ffdddd; /* メニュー項目にマウスが載ったときの背景色(淡いピンク) */
+  color: #dd0000;            /* メニュー項目にマウスが載ったときの文字色 */
+}
+
+/* -------------------- */
+/* ▼サブメニューの装飾 */
+/* -------------------- */
+ul.ddmenu ul {
+	background-color: #f0e9a8; /* メニュー項目の背景色 */
+  display: none;       /* ★1:標準では非表示にする */
+  margin: 0px;         /* ★2:サブメニュー外側の余白(ゼロ) */
+  padding: 0px;        /* ★3:サブメニュー内側の余白(ゼロ) */
+	position: absolute;  /* ★4:絶対配置にする */
+}
+
+/* ---------------------------------- */
+/* ▼サブメニューがある場合に開く処理 */   /* ※サブメニューが1階層しか存在しない場合の記述 */
+/* ---------------------------------- */
+ul.ddmenu li:hover ul {
+  display: block;      /* ★5:マウスポインタが載っている項目の内部にあるリストを表示する */
+}
+
+/* ------------------------ */
+/* ▼サブメニュー項目の装飾 */
+/* ------------------------ */
+ul.ddmenu ul li {   /* ※A */
+  width: 170px;               /* サブメニュー1項目の横幅(170px) */
+  border-top: 1px solid pink; /* 項目上側の枠線(ピンク色で1pxの実線) */
+}
+ul.ddmenu ul li a {   /* ※B */
+  line-height: 35px;   /* サブメニュー1項目の高さ(35px) */
+  text-align: left;    /* 文字列の配置(左寄せ) */
+  padding-left: 5px;   /* 文字列前方の余白(5px) */
+  font-weight: normal; /* 太字にはしない */
+}
+ul.ddmenu ul li a:hover {   /* ※C */
+	background-color: #ffdddd; /* メニュー項目にマウスが載ったときの背景色 */
+  color: #dd0000;            /* メニュー項目にマウスが載ったときの文字色 */
+}
+
+/* パンくずリスト */
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb li {
+	display: flex;
+	list-style: none;
+  font-weight: bold;/*太字*/
+}
+
+.breadcrumb li:after {/* >を表示*/
+  content: '>';
+  padding: 0 0.2em;
+  color: #555;
+}
+
+.breadcrumb li:last-child:after {
+  content: '';
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: #52b5ee;/*色*/
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
